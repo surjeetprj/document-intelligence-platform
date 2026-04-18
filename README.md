@@ -62,6 +62,7 @@ pip install -r requirements.txt
 # DB_NAME=your_db_name
 # DB_USER=your_db_user
 # DB_PASSWORD=your_db_pass
+# DB_ROOT_PASSWORD=your_db_root_pass
 
 # Run Migrations
 python manage.py makemigrations
