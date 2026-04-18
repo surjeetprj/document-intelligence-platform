@@ -26,7 +26,7 @@ This project fulfills all core requirements and explicitly tackles the following
 ![AI Insights View](./screenshots/insights.jpeg)
 *Figure 2: Detail page featuring LLM-generated Markdown summaries and metadata.*
 
-![RAG Chat Interface](./screenshots/chat-1.png)
+![RAG Chat Interface](./screenshots/chat-2.png)
 *Figure 3: Real-time RAG chat streaming context-aware answers.*
 
 ---
