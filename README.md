@@ -20,13 +20,13 @@ This project fulfills all core requirements and explicitly tackles the following
 
 *(Reviewer Note: UI features Tailwind CSS, Skeleton Loaders, and dynamic fallbacks)*
 
-![Dashboard View](./screenshots/dashboard.png)
+![Dashboard View](./screenshots/dashboard.jpeg)
 *Figure 1: Paginated, cached dashboard displaying 50 ingested books.*
 
-![AI Insights View](./screenshots/insights.png)
+![AI Insights View](./screenshots/insights.jpeg)
 *Figure 2: Detail page featuring LLM-generated Markdown summaries and metadata.*
 
-![RAG Chat Interface](./screenshots/chat.png)
+![RAG Chat Interface](./screenshots/chat-1.png)
 *Figure 3: Real-time RAG chat streaming context-aware answers.*
 
 ---
