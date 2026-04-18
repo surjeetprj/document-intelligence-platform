@@ -1,0 +1,4 @@
+mysql_data/
+chroma_data/
+.venv/
+venv/

@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: book_django
+    ports:
+      - "8000:8000"  # PORTS FORMAT: "HOST_PORT : CONTAINER_PORT"
+    volumes:
+      - .:/app
+    # This automatically loads all variables from your .env file
+    env_file:
+      - .env
+    # We only explicitly define the Docker-specific hosts here
+    environment:
+      - DB_HOST=db
+      - CHROMA_HOST=chromadb
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    container_name: book_mysql
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "3307:3306" 
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Healthcheck for MySQL to ensure it is ready for connections
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: book_chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+    ports:
+      - "8001:8000" 
+    volumes:
+      - chroma_data:/chroma/chroma
+
+volumes:
+  mysql_data:
+  chroma_data:
