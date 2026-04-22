@@ -4,16 +4,15 @@ A full-stack, AI-powered Retrieval-Augmented Generation (RAG) platform. This app
 
 ---
 
-## ✨ Assignment Milestones & Bonus Points Claimed
+## ✨ Core Features & Engineering Highlights
 
-This project fulfills all core requirements and explicitly tackles the following bonus challenges:
+This platform was built to handle complex data ingestion, performance optimization, and real-time AI generation. Key features and technical challenges solved include:
 
-- **🏆 Bulk Multimodal Scraping Pipeline:** Custom Django management command (`scrape_top_50`) that uses headless Selenium to safely scrape, chunk, and embed the Top 50 books in memory-safe batches of 10.
-- **🏆 Production-Grade Caching:** Implemented DRF `@cache_page` to cache the dashboard JSON payload, preventing database bottlenecks.
-- **🏆 Scalable Pagination:** Integrated DRF `PageNumberPagination` (12 items per page) with a custom React UI to handle massive datasets gracefully.
+- **Bulk Multimodal Scraping Pipeline:** Custom Django management command (`scrape_top_50`) that uses headless Selenium to safely scrape, chunk, and embed the Top 50 books in memory-safe batches of 10.
+- **Production-Grade Caching:** Implemented DRF `@cache_page` to cache the dashboard JSON payload, preventing database bottlenecks.
+- **Scalable Pagination:** Integrated DRF `PageNumberPagination` (12 items per page) with a custom React UI to handle massive datasets gracefully.
 - **Advanced RAG (Streaming):** Server-Sent Events (SSE) pipeline that streams LLM tokens to the React frontend for a real-time, ChatGPT-like typing effect.
 - **Deterministic AI JSON:** Strict prompt engineering ensures the 7B LLM consistently outputs deeply structured Markdown summaries, genres, and sentiments without breaking the API.
-
 ---
 
 ## 📸 Application Screenshots
