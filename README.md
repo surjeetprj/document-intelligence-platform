@@ -1,4 +1,4 @@
-# 📚 Ergosphere Document Intelligence Platform
+# 📚 Document Intelligence Platform
 
 A full-stack, AI-powered Retrieval-Augmented Generation (RAG) platform. This application automates the multimodal ingestion of Project Gutenberg books, generates structured literary insights via LLMs, and provides a real-time conversational interface to query document contents.
 
